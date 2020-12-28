@@ -29,7 +29,6 @@ layers.Conv2D()
 train_dir='data/train'
 test_dir='data/test'
 
-
    
 # ağı tanımlama
 model=models.Sequential()
