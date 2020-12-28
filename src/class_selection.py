@@ -6,8 +6,8 @@ import os
 
 # load data
 (X_train, y_train), (X_test, y_test) = cifar100.load_data()
-train_dir='../data/train'
-test_dir='../data/test'
+train_dir='data/train'
+test_dir='data/test'
 
 def open_dir(data_dir):
     if not os.path.exists(data_dir):
