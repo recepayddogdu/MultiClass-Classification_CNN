@@ -6,31 +6,30 @@ import cv2
 
 list_name=['/bee','/couch','/girl','/lawn_mower','/whale','/wolf']
 model=models.load_model('src/models/best_model2.h5')
-test_dir='data/test'
+test_path='data/test'
 
 
 for x,name in enumerate(list_name):
-    tahmin_list=[]
+    predict_list=[]
     random=np.random.randint(1,100)
-    path=(test_dir+name+'/'+str(random)+".png")
-    Giris1=image.load_img(path,
-                          target_size=(32,32))
+    path=(test_path+name+'/'+str(random)+".png")
+    Data1=image.load_img(path, target_size=(32,32))
 
-    #Numpy dizisine dönüştür
-    Giris=image.img_to_array(Giris1)
-    #Görüntüuü ağa uygula
-    y=model.predict(Giris.reshape(1,32,32,3))
-    #En yüksek tahmin sınıfını bul
-    tahmin_indeks=np.argmax(y)
-    tahmin_yuzde=y[0][tahmin_indeks]*100
+    Data=image.img_to_array(Data1)
     
+    y=model.predict(Data.reshape(1,32,32,3))
     
-    ax3 =plt.subplot(6,6,x+1)
+    predict_ind=np.argmax(y)
+    
+    ax3 = plt.subplot(6,1,x+1)
     ax3.set_yticks([])
     ax3.set_xticks([])
 
-    ax3.set_xlabel('Label:{0}\nTahmin:{1}'.format(list_name[x][1:],list_name[tahmin_indeks][1:]))
-    plt.imshow(Giris1)
+    ax3.set_ylabel('Olmasi Gereken:{0}\nTahmin:{1}'.format(list_name[x][1:],
+                                                    list_name[predict_ind][1:]),
+                                                    rotation=0,
+                                                    labelpad=75)
+    plt.imshow(Data1)
 
 plt.show()
     

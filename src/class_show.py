@@ -3,14 +3,10 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-train_dir="data/train"
-test_dir="data/test"
+train_path="data/train"
+test_path="data/test"
 
-def image_show(train_dir):
-    global img_list
-    global img
-    global img_name
-    global concate_list
+def class_show(train_path):
     concate_list=[]
     
     list_name=['/bee','/couch','/girl','/lawn_mower','/whale','/wolf']
@@ -19,10 +15,10 @@ def image_show(train_dir):
     for x,name in enumerate(list_name):
         img_list=[]
         img_first=name+"/0.png"
-        img_concate=cv2.imread(train_dir+img_first)
+        img_concate=cv2.imread(train_path+img_first)
         for i in range(10):
             img_name=name+"/"+str(i)+".png"
-            img=cv2.imread(train_dir+img_name)
+            img=cv2.imread(train_path+img_name)
             img_list.append(img)
             if i>0:
                 img_concate=np.concatenate((img_concate,img_list[i]),axis=1)
@@ -36,4 +32,4 @@ def image_show(train_dir):
     
     plt.show()
 
-image_show(train_dir)
+class_show(train_path)
