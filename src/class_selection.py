@@ -4,6 +4,8 @@ import cv2
 import numpy as np
 import os
 
+os.chdir("/mnt/HDD/Belgeler/Çalışmalar/Deep_Learning/MultiClass-Classification_CNN/Cifar100/")
+
 # load data
 (X_train, y_train), (X_test, y_test) = cifar100.load_data()
 train_path='data/train'
