@@ -3,9 +3,12 @@ from keras import models
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2 
+import os
+
+os.chdir("/mnt/HDD/Belgeler/Çalışmalar/Deep_Learning/MultiClass-Classification_CNN/Cifar100/")
 
 list_name=['/bee','/couch','/girl','/lawn_mower','/whale','/wolf']
-model=models.load_model('src/models/best_model2.h5')
+model=models.load_model('src/models/best_model_end.h5')
 test_path='data/test'
 
 
