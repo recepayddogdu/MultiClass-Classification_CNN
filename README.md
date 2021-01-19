@@ -435,9 +435,9 @@ Her sınıftaki 100 adet test verisi arasından rastgele birer data seçip, seç
 
 
 <p  align="center">
-<img  src="https://i.hizliresim.com/gUNjQs.png"  width="500">
+<img  src="https://i.hizliresim.com/DRSN5y.png"  width="750">
 </p>
 
-Yukarıdaki görselde göreceğimiz üzere bee, girl, lawn_mower, wolf sınıflarımız doğru tahmin edildi, couch ve whale sınıflarımız doğru tahmin edilemedi. **Modelimiz 6 sınıftan 4 tanesini doğru tahmin etti.** Test sonuçlarımızda da **`%84.5`** doğruluk sonucuna ulaşmıştık.
+Yukarıdaki görselde göreceğimiz üzere bee, girl, lawn_mower, whale, wolf sınıflarımız doğru tahmin edildi, couch sınıfımız doğru tahmin edilemedi. **Modelimiz 6 sınıftan 5 tanesini doğru tahmin etti.** Test sonuçlarımızda da **`%84.5`** doğruluk sonucuna ulaştığımızı gözlemlemiştik.
 
 Bu bölümün kodlarını incelemek için [tıklayınız.](https://github.com/recepayddogdu/MultiClass-Classification_CNN/blob/main/src/test.py)
