@@ -2,6 +2,14 @@
 -   100 sınıf içeren [Cifar100](https://www.cs.toronto.edu/~kriz/cifar.html) veriseti içerisinden 6 sınıf seçildi ve Convolutional Neural Network kullanılarak sınıflandırma problemi çözüldü.
 -   Model başarısını iyileştirmek için `Dropout`, `Data Augmentation` gibi yöntemler kullanıldı.
 
+## Bölümler
+- [1- Veriseti içerisinden 6 adet sınıf seçimi](##-1-Veriseti-içerisinden-6-adet-sınıf-seçimi)
+- [2- Seçilen sınıflara ait örnek verilerin görselleştirilmesi](##2-Seçilen-sınıflara-ait-örnek-verilerin-görselleştirilmesi)
+- [3- Model oluşturulması ve eğitimi](##3-Model-oluşturulması-ve-eğitimi)
+- [4- Dropout](##4-Dropout)
+- [5- Data Augmentation](##5-Data-Augmentation)
+- [6- Eğittiğimiz model ile test verilerinde predict işlemi](##6-Eğittiğimiz-model-ile-test-verilerinde-predict-işlemi)
+
 ## 1- Veriseti içerisinden 6 adet sınıf seçimi
 Projede Cifar100 veriseti içerisinden seçilen **bee**, **couch**, **girl**, **lawn_mower**, **whale**, **wolf** sınıfları kullanılmaktadır. Bu sınıflara ait görüntülerin bazı örneklerini 2. bölümde inceleyeceğiz.
 
